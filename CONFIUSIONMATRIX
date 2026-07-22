@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNCgGhjjIylQpve0ocnhkZr",
+      "authorship_tag": "ABX9TyNT4fVzX9+Byb+Rh0I2E8sc",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,35 +28,15 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": 2,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "BhBBmt9goJ1X",
-        "outputId": "154c585f-6f15-4ead-cb07-78a88947e0e7"
+        "outputId": "965377fb-142f-4f4b-8bfe-84395d1ac570"
       },
       "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stderr",
-          "text": [
-            "/tmp/ipykernel_1806/3892739042.py:12: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.\n",
-            "The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.\n",
-            "\n",
-            "For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.\n",
-            "\n",
-            "\n",
-            "  df['Age'].fillna(df['Age'].median(), inplace=True)\n",
-            "/tmp/ipykernel_1806/3892739042.py:13: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.\n",
-            "The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.\n",
-            "\n",
-            "For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.\n",
-            "\n",
-            "\n",
-            "  df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)\n"
-          ]
-        },
         {
           "output_type": "stream",
           "name": "stdout",
@@ -78,6 +58,26 @@
             "   macro avg       0.81      0.80      0.80       179\n",
             "weighted avg       0.81      0.81      0.81       179\n",
             "\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/tmp/ipykernel_1806/3892739042.py:12: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.\n",
+            "The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.\n",
+            "\n",
+            "For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.\n",
+            "\n",
+            "\n",
+            "  df['Age'].fillna(df['Age'].median(), inplace=True)\n",
+            "/tmp/ipykernel_1806/3892739042.py:13: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.\n",
+            "The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.\n",
+            "\n",
+            "For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.\n",
+            "\n",
+            "\n",
+            "  df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)\n"
           ]
         }
       ],
@@ -125,6 +125,15 @@
         "print(\"\\n--- Classification Report ---\")\n",
         "print(classification_report(y_test, y_pred))"
       ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Model Evaluation: Analyzed model performance using accuracy metrics and detailed Confusion Matrix evaluation."
+      ],
+      "metadata": {
+        "id": "XcbdDjp2qL9H"
+      }
     }
   ]
 }
